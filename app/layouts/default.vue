@@ -2,10 +2,23 @@
 import { computed } from 'vue'
 
 const route = useRoute()
+const config = useRuntimeConfig()
 
-const showSidebar = computed(() =>
-  ['/people', '/spaces'].includes(route.path),
-)
+const showSidebar = computed(() => {
+  const baseURL = config.app.baseURL
+
+  let path = route.path
+
+  // Убираем базовый путь GitHub Pages, если он есть.
+  if (baseURL !== '/' && path.startsWith(baseURL)) {
+    path = '/' + path.slice(baseURL.length)
+  }
+
+  // Убираем завершающий слеш.
+  path = path.replace(/\/+$/, '') || '/'
+
+  return ['/people', '/spaces'].includes(path)
+})
 </script>
 
 <template>
