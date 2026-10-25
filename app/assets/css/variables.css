@@ -1,0 +1,36 @@
+:root {
+  /* Основные цвета */
+  --color-primary: #416f66;
+  --color-primary-hover: #315a52;
+  --color-accent: #88b0aa;
+
+  /* Фоны */
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-secondary: #f1f1f1;
+
+  /* Текст */
+  --color-text: #161616;
+  --color-text-secondary: #666666;
+  --color-text-inverse: #ffffff;
+
+  /* Границы */
+  --color-border: #e4e4e4;
+
+  /* Состояния */
+  --color-success: #416f66;
+  --color-error: #d95368;
+
+  /* Скругления */
+  --radius-small: 6px;
+  --radius-medium: 10px;
+  --radius-large: 14px;
+
+  /* Тени */
+  --shadow-card: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+  /* Геометрия */
+  --container-width: 1440px;
+  --header-height: 680px;
+  --navigation-height: 60px;
+}
